@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
@@ -20,6 +21,7 @@ gulp.task('sass', function() {
   return gulp
   .src('./scss/styles.scss')
     .pipe(sass())
+    .pipe(rename('./styles.min.css'))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(cssnano())
     .pipe(gulp.dest('./css'));
