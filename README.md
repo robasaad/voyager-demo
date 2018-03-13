@@ -24,13 +24,7 @@ npm install
 
 ## Run server
 
-Run the built-in Node.js web server by typing:
-
-```
-node server.js
-```
-
-and then go to http://localhost:9000 in your browser.
+Run the built-in Node.js web server by typing `node server.js` in your terminal window and navigating to http://localhost:9000 in your favorite browser.
 
 
 ## Compiling Sass to CSS
