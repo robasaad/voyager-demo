@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Custom toggle component
+--------------------------------------------------------------*/
+// Brought to you by Shards UI: https://github.com/DesignRevision/shards-ui
+
+
+.custom-toggle {
+  position: relative;
+  padding-left: 60px;
+}
+.custom-toggle .custom-control-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 28px;
+  background: #fff;
+  border-radius: 100px;
+  border: 1px solid #becad6;
+}
+.custom-toggle .custom-control-label::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: #becad6;
+  border-radius: 100px;
+  transition: 350ms;
+}
+.custom-toggle .custom-control-input:checked ~ .custom-control-label::before {
+  background: #17c671;
+  border-color: #17c671;
+}
+.custom-toggle .custom-control-input:checked ~ .custom-control-label::after {
+  left: 46px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background: #fff;
+}
+.custom-toggle .custom-control-input:checked:disabled ~ .custom-control-label::before {
+  background: #e9ecef;
+  border-color: #becad6;
+}
+.custom-toggle .custom-control-input:checked:disabled ~ .custom-control-label::after {
+  background: #becad6;
+}
+.custom-toggle .custom-control-input:active:not(:disabled) ~ .custom-control-label::after {
+  width: 26px;
+}
+.custom-toggle .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
+  background-color: #fff;
+}
+.custom-toggle .custom-control-input:disabled:active ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+.custom-toggle .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0.313rem 0.719rem rgba(23, 198, 113, 0.1), 0 0.156rem 0.125rem rgba(0, 0, 0, 0.06);
+}
+.custom-toggle .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  box-shadow: 0 0.313rem 0.719rem rgba(0, 123, 255, 0.1), 0 0.156rem 0.125rem rgba(0, 0, 0, 0.06);
+}
