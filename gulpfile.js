@@ -21,7 +21,7 @@ gulp.task('sass', function() {
   return gulp
   .src('./scss/styles.scss')
     .pipe(sass())
-    .pipe(rename('./styles.min.css'))
+    .pipe(rename('styles.min.css'))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(cssnano())
     .pipe(gulp.dest('./css'));
