@@ -1,17 +1,40 @@
-var http = require('http');
-var fs = require('fs');
+// Huge props to Ryan Florence for writing this static file web server code.
+// Source: https://gist.github.com/ryanflorence/701407
 
-const PORT=9000;
+var http = require("http"),
+    url = require("url"),
+    path = require("path"),
+    fs = require("fs"),
+    port = process.argv[2] || 9000;
 
-fs.readFile('./index.html', function (err, html) {
+http.createServer(function(request, response) {
 
-    if (err) throw err;
+  var uri = url.parse(request.url).pathname
+    , filename = path.join(process.cwd(), uri);
 
-    console.log('Starting development server at http://localhost:9000/\nQuit the server with CONTROL-C.')
+  fs.exists(filename, function(exists) {
+    if(!exists) {
+      response.writeHead(404, {"Content-Type": "text/plain"});
+      response.write("404 Not Found\n");
+      response.end();
+      return;
+    }
 
-    http.createServer(function(request, response) {
-        response.writeHeader(200, {"Content-Type": "text/html"});
-        response.write(html);
+    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
+
+    fs.readFile(filename, "binary", function(err, file) {
+      if(err) {        
+        response.writeHead(500, {"Content-Type": "text/plain"});
+        response.write(err + "\n");
         response.end();
-    }).listen(PORT);
-});
+        return;
+      }
+
+      response.writeHead(200);
+      response.write(file, "binary");
+      response.end();
+    });
+  });
+}).listen(parseInt(port, 10));
+
+console.log("Starting development server at http://localhost:9000/\nQuit the server with CONTROL-C.");
