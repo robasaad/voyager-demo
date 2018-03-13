@@ -29,5 +29,5 @@ Run the built-in Node.js web server by typing `node server.js` in your terminal 
 
 ## Compiling Sass to CSS
 
-- To compile the main Sass file to CSS, use `gulp sass`.
-- To set an automated task that compiles CSS when changes are made to the main Sass file, use `gulp watch`.
+- Instantly compile Sass to CSS by using `gulp sass`.
+- Set an automated task that compiles CSS when changes are made to any Sass file by using `gulp watch`.
