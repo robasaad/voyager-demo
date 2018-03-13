@@ -1,45 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
-	<title>Voyager | Cumulus Networks</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <title>Voyager | Cumulus Networks</title>
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.min.css">
-
-	<!-- Fonts -->
-	<link rel="stylesheet" href="css/montserrat.css">
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
 
 </head>
 <body>
-	
-	<!-- Content -->
-	<h1>Hello world!</h1>
+  
+  <!-- Content -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 reveal-first">
+          <h1>Voyager</h1>
+          <img src="img/a-product-by-cumulus.png" alt="A product by Cumulus" class="mx-auto d-block" style="width: 230px; margin-bottom: 35px;">
+          <p>Thundercats scenester yuccie iPhone, artisan DIY fanny pack hoodie whatever subway tile bushwick man braid sriracha lo-fi polaroid.</p>
+          <p>Single-origin coffee banjo umami shaman, narwhal drinking vinegar migas stumptown. Shabby chic meh taiyaki palo santo vice.</p>
+        </div>
+        <div class="col-lg-8 reveal-second">
+          <form>
+            <fieldset>
+              <div class="form-group">
+                <label>Host and port</label>
+                <input type="text" class="form-control" id="host-port-1">
+                <input type="text" class="form-control" id="host-port-2">
+              </div>
+              <div class="form-group">
+                <label>Interface</label>
+                <select class="custom-select" id="interface-1">
+                  <option value="">-- Please select --</option>
+                  <option value="L1">L1</option>
+                  <option value="L2">L2</option>
+                  <option value="L3">L3</option>
+                  <option value="L4">L4</option>
+                </select>
+                <select class="custom-select" id="interface-2">
+                  <option value="">-- Please select --</option>
+                  <option value="L1">L1</option>
+                  <option value="L2">L2</option>
+                  <option value="L3">L3</option>
+                  <option value="L4">L4</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="form-group toggle-badge-container">
+                <label></label>
+                <div>
+                  <div class="custom-control custom-toggle my-1">
+                    <input type="checkbox" id="customToggle1" name="customToggle1" class="custom-control-input">
+                    <label class="custom-control-label" for="customToggle1">Disabled</label>
+                  </div>
+                  <div class="badge-group">
+                    <span class="badge badge-success mr-1">Up</span>
+                    <!-- <span class="badge badge-warning mr-1">Down</span> -->
+                    <!-- <span class="badge badge-danger mr-1">Fault</span> -->
+                    <label>Status</label>
+                  </div>
+                </div>
+                <div>
+                  <div class="custom-control custom-toggle my-2">
+                    <input type="checkbox" id="customToggle2" name="customToggle2" class="custom-control-input">
+                    <label class="custom-control-label" for="customToggle2">Disabled</label>
+                  </div>
+                  <div class="badge-group">
+                    <span class="badge badge-success mr-1">Up</span>
+                    <!-- <span class="badge badge-warning mr-1">Down</span> -->
+                    <!-- <span class="badge badge-danger mr-1">Fault</span> -->
+                    <label>Status</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Transmit power</label>
+                <input type="text" class="form-control" id="transmit-power-1">
+                <input type="text" class="form-control" id="transmit-power-2">
+              </div>
+              <div class="form-group">
+                <label>Frequency</label>
+                <select class="custom-select" id="frequency-1">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <select class="custom-select" id="frequency-2">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Modulation</label>
+                <select class="custom-select" id="modulation-1">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <select class="custom-select" id="modulation-2">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Error correction</label>
+                <select class="custom-select" id="error-correction-1">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <select class="custom-select" id="error-correction-2">
+                  <option value="">-- Please select --</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Receive power</label>
+                <input type="text" class="form-control" id="receive-power-1" disabled placeholder="Value goes here">
+                <input type="text" class="form-control" id="receive-power-2" disabled placeholder="Value goes here">
+              </div>
+              <div class="form-group">
+                <label>Bit error rate</label>
+                <input type="text" class="form-control" id="bit-error-rate-1" disabled placeholder="Value goes here">
+                <input type="text" class="form-control" id="bit-error-rate-2" disabled placeholder="Value goes here">
+              </div>
+              <div class="form-group">
+                <label>Corrected bits</label>
+                <input type="text" class="form-control" id="corrected-bits-1" disabled placeholder="Value goes here">
+                <input type="text" class="form-control" id="corrected-bits-2" disabled placeholder="Value goes here">
+              </div>
+              <div class="form-group btn-container">
+                <label></label>
+                <div>
+                  <button type="submit" class="btn btn-outline-dark mt-4" id="reset-1">
+                    <i class="fa fa-sync-alt mr-2"></i>Reset
+                  </button>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-outline-dark mt-4" id="reset-2">
+                    <i class="fa fa-sync-alt mr-2"></i>Reset
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
 
-	<!-- Scripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/fontawesome-all.min.js"></script>
-	<script src="js/scrollreveal.min.js"></script>
-	<script>
-		$(function() {
-			// Init ScrollReveal
-	        window.sr = ScrollReveal();
-	        sr.reveal('.reveal', {
-	            origin: 'top',
-	            distance: '20px',
-	            duration: 600,
-	            delay: 100,
-	            scale: 1
-	        });
-		});
-	</script>
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/fontawesome-all.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script>
+      $(function() {
+          // Init ScrollReveal
+          // window.sr = ScrollReveal();
+          // sr.reveal('.reveal-first', {
+          //     origin: 'top',
+          //     distance: '20px',
+          //     duration: 800,
+          //     delay: 200,
+          //     scale: 1
+          // });
+          // sr.reveal('.reveal-second', {
+          //     origin: 'top',
+          //     distance: '20px',
+          //     duration: 800,
+          //     delay: 700,
+          //     scale: 1
+          // });
+
+          // Change label text when using custom toggle
+          $('#customToggle1, #customToggle2').change(function() {
+              var label = $(this).siblings('label');
+                  if ( label.html() == 'Disabled' ) {
+                      label.html('Enabled');
+                  } else {
+                      label.html('Disabled');
+              }
+          });
+      });
+  </script>
 
 </body>
 </html>

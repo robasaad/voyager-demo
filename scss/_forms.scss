@@ -1,16 +1,55 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.form-group {
+  margin-bottom: 0.5rem;
+
+  &.toggle-badge-container {
+    margin-top: 40px;
+
+    > div label {
+      @include form-value-style;
+      text-transform: none;
+      width: unset;
+      margin: 0px;
+    }
+    .custom-toggle,
+    .badge-group {
+      @include inline-block-align-middle;
+    }
+  }
+}
 
 label {
   width: 180px;
+  margin: 0 15px 0 0;
   @include inline-block-align-middle;
+  font-family: $montserrat;
+  letter-spacing: 0.25px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+  color: $limed-spruce;
 }
-input[type=text] {
+input[type=text],
+select.custom-select,
+.form-group.btn-container > div,
+.form-group.toggle-badge-container > div {
   width: 250px;
+  margin: 0 10px;
   @include inline-block-align-middle;
 }
+input[type=text],
 select.custom-select {
-  width: 250px;
-  @include inline-block-align-middle;
+  background-color: $white;
+  border: 1px solid #C5CBD0;
+  box-shadow: 0 3px 4px 0 rgba(45,56,66,0.05);
+  border-radius: 2px;
+  height: 42px;
+  @include form-value-style;
+}
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #F4F5F7;
 }

@@ -7,6 +7,8 @@
 .custom-toggle {
   position: relative;
   padding-left: 60px;
+  min-width: 7.75rem;
+  min-height: 1.7rem;
 }
 .custom-toggle .custom-control-label::before {
   position: absolute;
@@ -31,8 +33,8 @@
   transition: 350ms;
 }
 .custom-toggle .custom-control-input:checked ~ .custom-control-label::before {
-  background: #17c671;
-  border-color: #17c671;
+  background: $jade;
+  border-color: $jade;
 }
 .custom-toggle .custom-control-input:checked ~ .custom-control-label::after {
   left: 46px;

@@ -2,6 +2,24 @@
 # Typography
 --------------------------------------------------------------*/
 
+$montserrat: Montserrat, sans-serif;
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 h1 {
-	
+  font-family: $montserrat;
+  font-size: 98px;
+  font-weight: 300;
+  line-height: 100px;
+  color: $jade;
+  letter-spacing: -3px;
+  margin: 40px 0 35px;
+}
+p {
+  font-family: $montserrat;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+  color: $limed-spruce;
+  letter-spacing: -0.1px;
+  margin-bottom: 25px;
 }

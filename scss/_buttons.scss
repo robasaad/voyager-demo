@@ -2,3 +2,22 @@
 # Buttons
 --------------------------------------------------------------*/
 
+.btn {
+  border-radius: 0;
+  border-width: 2px;
+  font-family: $montserrat;
+  font-size: 14px;
+  padding: .375rem 1rem;
+  .svg-inline--fa {
+    font-size: 11px;
+  }
+}
+
+button[type="submit"] {
+  color: $jade;
+  border-color: $jade;
+  &:hover {
+    background-color: $jade;
+    border-color: $jade;
+  }
+}

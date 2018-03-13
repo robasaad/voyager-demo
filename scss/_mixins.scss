@@ -1,4 +1,15 @@
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+
 @mixin inline-block-align-middle {
   display: inline-block;
   vertical-align: middle;
+}
+
+@mixin form-value-style {
+  font-family: $helvetica;
+  font-size: 14px;
+  color: #495057;
+  letter-spacing: -0.25px;
 }
