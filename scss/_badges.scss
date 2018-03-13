@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+# Badges
+--------------------------------------------------------------*/
+
+.badge {
+  padding: 0.75em 1em;
+  border-radius: 15px;
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: 11px;
+  color: $white;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+.badge-success {
+  background-color: $jade;
+}
+.badge-warning {
+  background-color: $energy-yellow;
+}
+.badge-danger {
+  background-color: $radical-red;
+}
