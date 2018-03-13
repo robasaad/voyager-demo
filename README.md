@@ -1,6 +1,6 @@
 # Voyager Demo
 
-[[https://github.com/robasaad/voyager-demo/blob/master/img/screenshot.jpg]]
+![Screenshot](img/screenshot.jpg)
 
 ## Prerequisites
 
