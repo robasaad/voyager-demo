@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+label {
+  width: 180px;
+  @include inline-block-align-middle;
+}
+input[type=text] {
+  width: 250px;
+  @include inline-block-align-middle;
+}
+select.custom-select {
+  width: 250px;
+  @include inline-block-align-middle;
+}
