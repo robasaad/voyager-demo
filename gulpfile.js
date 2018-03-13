@@ -19,7 +19,7 @@ var autoprefixerOptions = {
 
 gulp.task('sass', function() {
   return gulp
-  .src('./scss/styles.scss')
+  .src('./scss/imports.scss')
     .pipe(sass())
     .pipe(rename('styles.min.css'))
     .pipe(autoprefixer(autoprefixerOptions))
@@ -28,5 +28,5 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./scss/styles.scss', ['sass']);
+  gulp.watch('./scss/*.scss', ['sass']);
 });
