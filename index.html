@@ -26,6 +26,20 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/fontawesome-all.min.js"></script>
+	<script src="js/scrollreveal.min.js"></script>
+	<script>
+		$(function() {
+			// Init ScrollReveal
+	        window.sr = ScrollReveal();
+	        sr.reveal('.reveal', {
+	            origin: 'top',
+	            distance: '20px',
+	            duration: 600,
+	            delay: 100,
+	            scale: 1
+	        });
+		});
+	</script>
 
 </body>
 </html>
